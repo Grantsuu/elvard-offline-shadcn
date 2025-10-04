@@ -2,18 +2,19 @@
 
 import * as React from "react"
 import {
-    AudioWaveform,
+    // AudioWaveform,
     BookOpen,
     Bot,
-    Command,
+    // Command,
     Frame,
-    GalleryVerticalEnd,
+    // GalleryVerticalEnd,
     CircleQuestionMark,
     Map,
     PieChart,
     Settings,
-    Settings2,
+    // Settings2,
     SquareTerminal,
+    Swords,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -38,25 +39,25 @@ const data = {
     },
     teams: [
         {
-            name: "Acme Inc",
-            logo: GalleryVerticalEnd,
-            plan: "Enterprise",
+            name: "Grantsu",
+            logo: Swords,
+            plan: "New Adventurer",
         },
-        {
-            name: "Acme Corp.",
-            logo: AudioWaveform,
-            plan: "Startup",
-        },
-        {
-            name: "Evil Corp.",
-            logo: Command,
-            plan: "Free",
-        },
+        // {
+        //     name: "Acme Corp.",
+        //     logo: AudioWaveform,
+        //     plan: "Startup",
+        // },
+        // {
+        //     name: "Evil Corp.",
+        //     logo: Command,
+        //     plan: "Free",
+        // },
     ],
     navMain: [
         {
-            title: "Playground",
-            url: "#",
+            title: "Status",
+            url: "#status",
             icon: SquareTerminal,
             isActive: true,
             items: [
@@ -75,7 +76,7 @@ const data = {
             ],
         },
         {
-            title: "Models",
+            title: "Equipment",
             url: "#",
             icon: Bot,
             items: [
@@ -94,7 +95,7 @@ const data = {
             ],
         },
         {
-            title: "Documentation",
+            title: "Inventory",
             url: "#",
             icon: BookOpen,
             items: [
@@ -116,28 +117,22 @@ const data = {
                 },
             ],
         },
+    ],
+    projects: [
         {
-            title: "Settings",
+            name: "Cooking",
+            url: "#fishing",
+            icon: Frame,
+        },
+        {
+            name: "Farming",
             url: "#",
-            icon: Settings2,
-            items: [
-                {
-                    title: "General",
-                    url: "#",
-                },
-                {
-                    title: "Team",
-                    url: "#",
-                },
-                {
-                    title: "Billing",
-                    url: "#",
-                },
-                {
-                    title: "Limits",
-                    url: "#",
-                },
-            ],
+            icon: PieChart,
+        },
+        {
+            name: "Fishing",
+            url: "#",
+            icon: Map,
         },
     ],
     navSecondary: [
@@ -152,28 +147,11 @@ const data = {
             icon: CircleQuestionMark,
         },
     ],
-    projects: [
-        {
-            name: "Design Engineering",
-            url: "#",
-            icon: Frame,
-        },
-        {
-            name: "Sales & Marketing",
-            url: "#",
-            icon: PieChart,
-        },
-        {
-            name: "Travel",
-            url: "#",
-            icon: Map,
-        },
-    ],
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     return (
-        <Sidebar collapsible="icon" {...props}>
+        <Sidebar className="top-(--header-height) h-[calc(100svh-var(--header-height))]!" collapsible="icon" {...props}>
             <SidebarHeader>
                 <TeamSwitcher teams={data.teams} />
             </SidebarHeader>
