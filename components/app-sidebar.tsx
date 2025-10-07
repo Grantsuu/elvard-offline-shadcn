@@ -117,17 +117,17 @@ const data = {
     projects: [
         {
             name: "Cooking",
-            url: "cooking",
+            url: "/dashboard/skills/cooking",
             icon: ChefHat,
         },
         {
             name: "Farming",
-            url: "farming",
+            url: "/dashboard/skills/farming",
             icon: Sprout,
         },
         {
             name: "Fishing",
-            url: "fishing",
+            url: "/dashboard/skills/fishing",
             icon: Fish,
         },
     ],
