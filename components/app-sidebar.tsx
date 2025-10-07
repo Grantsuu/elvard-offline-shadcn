@@ -2,19 +2,15 @@
 
 import * as React from "react"
 import {
-    // AudioWaveform,
     BookOpen,
     Bot,
-    // Command,
-    Frame,
-    // GalleryVerticalEnd,
+    ChefHat,
     CircleQuestionMark,
-    Map,
-    PieChart,
+    Fish,
     Settings,
-    // Settings2,
+    Sprout,
     SquareTerminal,
-    Swords,
+    Swords
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -121,18 +117,18 @@ const data = {
     projects: [
         {
             name: "Cooking",
-            url: "#fishing",
-            icon: Frame,
+            url: "cooking",
+            icon: ChefHat,
         },
         {
             name: "Farming",
-            url: "#",
-            icon: PieChart,
+            url: "farming",
+            icon: Sprout,
         },
         {
             name: "Fishing",
-            url: "#",
-            icon: Map,
+            url: "fishing",
+            icon: Fish,
         },
     ],
     navSecondary: [
